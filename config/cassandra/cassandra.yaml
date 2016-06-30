@@ -522,8 +522,8 @@ ssl_storage_port: 7001
 # you can specify which should be chosen using listen_interface_prefer_ipv6. If false the first ipv4
 # address will be used. If true the first ipv6 address will be used. Defaults to false preferring
 # ipv4. If there is only one address it will be selected regardless of ipv4/ipv6.
-# listen_address: {{ansible_eth0.ipv4.address}}
-listen_interface: {{ansible_local.bb.node.nic_int}}
+listen_address: {{ansible_eth0.ipv4.address}}
+# listen_interface: {{ansible_local.bb.node.nic_int}}
 # listen_interface_prefer_ipv6: false
 
 # Address to broadcast to other Cassandra nodes
@@ -597,8 +597,8 @@ start_rpc: false
 # you can specify which should be chosen using rpc_interface_prefer_ipv6. If false the first ipv4
 # address will be used. If true the first ipv6 address will be used. Defaults to false preferring
 # ipv4. If there is only one address it will be selected regardless of ipv4/ipv6.
-# rpc_address: 0.0.0.0
-rpc_interface: {{ansible_local.bb.node.nic_int}}
+rpc_address: 0.0.0.0
+# rpc_interface: {{ansible_local.bb.node.nic_int}}
 # rpc_interface_prefer_ipv6: false
 
 # port for Thrift to listen for clients on
